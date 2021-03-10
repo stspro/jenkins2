@@ -14,9 +14,9 @@ node {
    stage '1'
    echo 'checkout'
 
-   git url: "https://github.com/hotwilson/jenkins2.git"
+   git url: "https://github.com/stspro/jenkins2.git"
 
-   bat'git rev-parse HEAD > GIT_COMMIT'
+   sh'git rev-parse HEAD > GIT_COMMIT'
    def shortCommit = readFile('GIT_COMMIT').take(6)
 
    stage '2'
